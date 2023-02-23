@@ -10,6 +10,7 @@ library("tidyverse")
 source("chart1_example.R")
 source("summary.R")
 source("chart2_example.R")
+source("chart3.R")
 ```
 
 ### Introduction
@@ -93,7 +94,9 @@ The last chart is up to you. It could be a line plot, scatter plot, histogram, b
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r bar_chart, echo = FALSE}
+bar_chart
+
 ```
 
 
