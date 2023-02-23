@@ -3,6 +3,14 @@ title: "A3: SPL Library Checkouts"
 output: html_document
 ---
 
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library("dplyr")
+library("stringr")
+library("tidyverse")
+source("chart1_example.R")
+source("summary.R")
+```
+
 ### Introduction
 
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
@@ -39,7 +47,7 @@ The first chart that you will create and include will show the trend over time o
 - Show more than one, but fewer than ~10 trends
   - For example, two books, or 5 different mediums
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title.
 - You need a legend for your different line colors and a clear - legend title
 In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
 
@@ -47,7 +55,9 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```{r Dickens_plot, echo = FALSE}
+Dickens_plot
+
 ```
 
 ### Second Trends Over Time Chart
@@ -59,7 +69,7 @@ The second chart that you will create and include will show another trend over t
 - Show more than one, but fewer than ~10 trends
   - For example, two books, or 5 different mediums
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title.
 - You need a legend for your different line colors and a clear - legend title
 In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
 
@@ -75,7 +85,7 @@ Here's an example of how to run an R script inside an RMarkdown file:
 The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
 
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title.
 - You need a legend for your different line colors and a clear legend title
 
 Here's an example of how to run an R script inside an RMarkdown file:

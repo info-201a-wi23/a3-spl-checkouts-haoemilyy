@@ -2,6 +2,7 @@
 library("dplyr")
 library("stringr")
 library("ggplot2")
+library("plotly")
 
 spl_df <- read.csv("~/2022-2023-All-Checkouts-SPL-Data.csv/2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
 
@@ -20,7 +21,7 @@ Dickens_checkouts_df <- Dickens_titles %>%
   group_by(date, Title) %>% 
   summarize(Dickens_total_checkouts = sum(Checkouts))
 
-ggplot(data = Dickens_checkouts_df) +
+Dickens_plot <- ggplot(data = Dickens_checkouts_df) +
   geom_line(aes(x = date,
                 y = Dickens_total_checkouts,
                 color = Title)) +
@@ -29,3 +30,4 @@ ggplot(data = Dickens_checkouts_df) +
        x = "Date",
        y = "Total Checkouts") +
   guides(color = guide_legend(title = "Book Title"))  
+
