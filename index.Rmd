@@ -14,11 +14,8 @@ source("chart3.R")
 ```
 
 ### Introduction
-With this dataset of prison and jail information from 1970 to 2018, I plan to observe the proportion of women in jail and in prison. I am planning to analyse the jail population of women (female_jail_pop) from more recent years, as the data is more accurate from 2015 on due to how the data is collected. For prison populations I will be analyzing female populations (female_prison_pop) but also female populations by race (aapi_female_prison_pop,black_female_prison_pop,latinx_female_prison_pop,native_female_prison_pop,other_race_female_prison_pop, and white_female_prison_pop). I will look at the proportion of females by race in the prison system by analyzing the female population variables and their race categories. I am hoping to develop some insight on female populations in prison, and how their race may affect the size of population.
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
-
-Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see 
+Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see how popular his books were in relation to one another by analyzing how many of his books were checked out by the Seattle Public Library. I plan to compare data between physical and digital checkouts for his books, and by doing so, I hope to draw insight on current reading trends. I will also look at Charles' Dickens top books by total checkouts in order to see what his most popular and least popular books are, and how those trends change between 2022 and 2023. 
 
 ### Summary Information
 
@@ -42,7 +39,7 @@ Feel free to calculate and report values that you find relevant.
 - How was the data collected or generated?  
   - This data was collected on a monthly basis, counting the Seattle Public Library checkouts by title for physical and electronic items.
 - Why was the data collected?  
-  - This data was collected in order to record the different reading trends over time, such as how print and electronic items have changed or which authors/books became popular during certain periods of times. 
+  - This data was collected in order to record the checkouts of physical and digital library items. the different reading trends over time, such as how print and electronic items have changed or which authors/books became popular during certain periods of times. 
 - What, if any, ethical questions do you need to consider when working with this data?  
 - What are possible limitations or problems with this data?   (at least 200 words)
 
@@ -69,21 +66,6 @@ Dickens_plot
 ```
 
 ### Second Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title.
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r material_plot, echo = FALSE}
 material_plot
