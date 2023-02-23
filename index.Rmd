@@ -14,8 +14,11 @@ source("chart3.R")
 ```
 
 ### Introduction
+With this dataset of prison and jail information from 1970 to 2018, I plan to observe the proportion of women in jail and in prison. I am planning to analyse the jail population of women (female_jail_pop) from more recent years, as the data is more accurate from 2015 on due to how the data is collected. For prison populations I will be analyzing female populations (female_prison_pop) but also female populations by race (aapi_female_prison_pop,black_female_prison_pop,latinx_female_prison_pop,native_female_prison_pop,other_race_female_prison_pop, and white_female_prison_pop). I will look at the proportion of females by race in the prison system by analyzing the female population variables and their race categories. I am hoping to develop some insight on female populations in prison, and how their race may affect the size of population.
 
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+
+Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see 
 
 ### Summary Information
 
@@ -33,12 +36,15 @@ Feel free to calculate and report values that you find relevant.
 ### The Dataset
 
 - Who collected/published the data?  
+  - The Seattle Public Library provided this data as an open source dataset.
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+  - The parameters of the data include: UsageClass, CheckoutType, MaterialType, CheckoutYear, CheckoutMonth, Checkouts, Title, ISBN, Creator, Subjects, Publisher, and PublicationYear.
 - How was the data collected or generated?  
+  - This data was collected on a monthly basis, counting the Seattle Public Library checkouts by title for physical and electronic items.
 - Why was the data collected?  
+  - This data was collected in order to record the different reading trends over time, such as how print and electronic items have changed or which authors/books became popular during certain periods of times. 
 - What, if any, ethical questions do you need to consider when working with this data?  
 - What are possible limitations or problems with this data?   (at least 200 words)
-
 
 ### First Trends Over Time Chart
 
