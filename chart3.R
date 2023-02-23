@@ -14,6 +14,18 @@ spl_df$date <- as.Date(spl_df$date, format = "%Y-%m-%d")
 Dickens_df <- spl_df %>% 
   filter(str_detect(Creator, "Dickens"))
 
+Dickens_df$Title[str_detect(Dickens_df$Title, "Oliver Twist")] <- "Oliver Twist"
+Dickens_df$Title[str_detect(Dickens_df$Title, "Great Expectations")] <- "Great Expectations"
+Dickens_df$Title[str_detect(Dickens_df$Title, "A Tale of Two Cities")] <- "A Tale of Two Cities"
+Dickens_df$Title[str_detect(Dickens_df$Title, "A Christmas Carol")] <- "A Christmas Carol"
+Dickens_df$Title[str_detect(Dickens_df$Title, "David Copperfield")] <- "David Copperfield"
+Dickens_df$Title[str_detect(Dickens_df$Title, "Bleak House")] <- "Bleak House"
+Dickens_df$Title[str_detect(Dickens_df$Title, "Martin Chuzzlewit")] <- "Martin Chuzzlewit"
+Dickens_df$Title[str_detect(Dickens_df$Title, "The Old Curiosity Shop")] <- "The Old Curiosity Shop"
+Dickens_df$Title[str_detect(Dickens_df$Title, "The Pickwick Papers")] <- "The Pickwick Papers"
+Dickens_df$Title[str_detect(Dickens_df$Title, "Our Mutual Friend")] <- "Our Mutual Friend"
+Dickens_df$Title[str_detect(Dickens_df$Title, "The Life and Adventures of Nicholas Nickleby")] <- "The Life and Adventures of Nicholas Nickleby"
+
 Dickens_checkouts_df <- Dickens_df %>% 
   group_by(Title) %>% 
   filter(UsageClass == "Digital") %>% 

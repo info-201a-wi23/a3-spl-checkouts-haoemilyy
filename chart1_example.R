@@ -27,7 +27,7 @@ Dickens_checkouts_df <- Dickens_titles %>%
   group_by(date, Title) %>% 
   summarize(Dickens_total_checkouts = sum(Checkouts))
 
-ggplot(data = Dickens_checkouts_df) +
+Dickens_plot <- ggplot(data = Dickens_checkouts_df) +
   geom_line(aes(x = date,
                 y = Dickens_total_checkouts,
                 color = Title)) +
