@@ -9,6 +9,7 @@ library("stringr")
 library("tidyverse")
 source("chart1_example.R")
 source("summary.R")
+source("chart2_example.R")
 ```
 
 ### Introduction
@@ -77,7 +78,9 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r material_plot, echo = FALSE}
+material_plot
+
 ```
 
 ### Your Choice
