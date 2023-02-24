@@ -55,6 +55,8 @@ Dickens_plot
 material_plot
 
 ```
+This chart compares the material type of the Seattle Public Library's checkouts for Charles Dickens' books. I included this chart because I was interested to analyze how material types for books change over time, especially as technology has become more integrated in our lives. I was also wondering what material type users generally prefer to read, whether it's print or digital. A pattern I noticed is how each of the material type categories seem to have declined in total checkouts from January 2022 up until around October 2022 before increasing again. In the case of audiobooks and ebooks, which have been the main preference of material types for users, their total checkouts increased greatly around December and January, with ebooks spiking up to almost 300 total checkouts. The spikes in total checkouts for audiobooks, ebooks, and print books around this time could be attributed to the holidays and New Year's resolutions of reading more. 
+
 
 ### Your Choice
 
