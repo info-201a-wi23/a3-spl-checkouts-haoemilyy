@@ -1,5 +1,6 @@
 ---
 title: "A3: SPL Library Checkouts"
+author: "Emily Hao"
 output: html_document
 ---
 
@@ -15,10 +16,15 @@ source("chart3.R")
 
 ### Introduction
 
-Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see how popular his books were in relation to one another by analyzing how many of his books were checked out by the Seattle Public Library. I plan to compare data between physical and digital checkouts for his books, and by doing so, I hope to draw insight on current reading trends. I will also look at Charles' Dickens top books by total checkouts in order to see what his most popular and least popular books are, and how those trends change between 2022 and 2023. 
+Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see how popular his books were in relation to one another by analyzing how many of his books were checked out from the Seattle Public Library. I plan to compare data between physical and digital checkouts for his books, and by doing so, I hope to draw insight on current reading trends. I will also look at Charles' Dickens top books by total checkouts in order to see what his most popular and least popular books are, and how those trends changed or did not change between 2022 and 2023. 
 
 ### Summary Information
 
+First, when filtering the entire 2022-23 dataset, I found that out of the `r total_spl_checkouts` total checkouts from the Seattle Public Library, `r total_dickens_checkouts` were of Charles Dickens' books. This makes the proportion of the total Charles' Dickens checkouts to the total amount of checkouts `r proportion`. 
+
+In terms of comparing digital to physical book checkouts, there were `r digital_book_total_checkouts` total digital book checkouts and there were `r physical_book_total_checkouts` total physical book checkouts. Out of the digital book checkouts, the most checked out Charles Dickens book in one month is *`r digital_most_title_monthly`*, with `r digital_most_monthly_checkout` checkouts. The most checked out Charles Dickens physical book in one month is *`r physical_most_title_checkout`*, with `r physical_most_monthly_checkout` checkouts.
+
+During the entire 2022 to 2023 time period, the Charles Dickens physical book with the most checkouts is *`r physical_title_most_checkouts`*, with `r physical_most_checkouts` checkouts. The Charles Dickens digital book with the most checkouts is *`r digital_title_most_checkouts`*, with `r digital_most_checkouts` checkouts.
 
 
 ### The Dataset
@@ -35,21 +41,6 @@ Using this dataset of all items checked out from the Seattle Public Library in 2
 - What are possible limitations or problems with this data?   (at least 200 words)
 
 ### First Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title.
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r Dickens_plot, echo = FALSE}
 Dickens_plot

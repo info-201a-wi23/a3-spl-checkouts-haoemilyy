@@ -39,7 +39,7 @@ bar_chart <- ggplot(Dickens_checkouts_df[tail(order(Dickens_checkouts_df$Dickens
     x = Dickens_total_checkouts,
     y = reorder(Title, +Dickens_total_checkouts),
     fill = Title)) +
-  labs(title = "Top 10 Charles Dickens Digital Book Checkouts",
+  labs(title = "Top 10 Charles Dickens Digital Book Checkouts 2022-23",
        x = "Total Checkouts",
        y = "Book Title") +
   guides(fill="none")
