@@ -31,9 +31,6 @@ Dickens_checkouts_df <- Dickens_df %>%
   filter(UsageClass == "Digital") %>% 
   summarize(Dickens_total_checkouts = sum(Checkouts))
 
-ggplot(Dickens_checkouts_df[tail(order(Dickens_checkouts_df$Dickens_total_checkouts), 10), ], ) + 
-  aes(x = Title, y = Dickens_total_checkouts, fill = Title) + geom_col() 
-
 bar_chart <- ggplot(Dickens_checkouts_df[tail(order(Dickens_checkouts_df$Dickens_total_checkouts), 10), ], ) +
   geom_col(mapping = aes(
     x = Dickens_total_checkouts,
