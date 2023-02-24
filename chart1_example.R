@@ -21,13 +21,9 @@ Dickens_df$Title[str_detect(Dickens_df$Title, "David Copperfield")] <- "David Co
 
 Dickens_titles <- Dickens_df %>% 
   filter(Title %in% 
-           c("Oliver Twist", "Great Expectations", "A Tale of Two Cities", "A Christmas Carol", "David Copperfield"))
+           c("Oliver Twist", "Great Expectations", "A Tale of Two Cities", "A Christmas Carol", "David"))
 
-Dickens_checkouts_df <- Dickens_titles %>% 
-  group_by(date, Title) %>% 
-  summarize(Dickens_total_checkouts = sum(Checkouts))
-
-Dickens_plot <- ggplot(data = Dickens_checkouts_df) +
+Dickens_plot <- ggplot(data = Dickens_df) +
   geom_line(aes(x = date,
                 y = Dickens_total_checkouts,
                 color = Title)) +

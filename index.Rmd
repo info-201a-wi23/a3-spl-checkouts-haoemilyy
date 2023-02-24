@@ -16,7 +16,7 @@ source("chart3.R")
 
 ### Introduction
 
-Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see how popular his books were in relation to one another by analyzing how many of his books were checked out from the Seattle Public Library. I plan to compare data between physical and digital checkouts for his books, and by doing so, I hope to draw insight on current reading trends. I will also look at Charles' Dickens top books by total checkouts in order to see what his most popular and least popular books are, and how those trends changed or did not change between 2022 and 2023. 
+Using this dataset of all items checked out from the Seattle Public Library in 2022-2023, I plan to more specifically analyze Charles Dickens' books. I remember reading quite a few of his books as part of my high school's literature curriculum, so I was curious to see how popular his books were in relation to one another by analyzing how many of his books were checked out from the Seattle Public Library. I was also curious to see if people still consistently read his books, even though they are classified more as timeless literature classics and books that aren't "trendy" or current "pop culture". I plan to compare data between physical and digital checkouts for his books, and by doing so, I hope to draw insight on current reading trends. I will also look at Charles' Dickens top books by total checkouts in order to see what his most popular and least popular books are, and how those trends changed or did not change between 2022 and 2023. 
 
 ### Summary Information
 
@@ -40,7 +40,7 @@ During the entire 2022 to 2023 time period, the Charles Dickens physical book wi
 - What, if any, ethical questions do you need to consider when working with this data?  
   - One ethical question that may need to be considered when working with this dataset is possibly concerns over privacy. Some people may feel that the Seattle Public Library is intruding upon their privacy because their book checkout data, though essentially anonymous, is being collected, uploaded, and then shared publicly on the internet. 
 - What are possible limitations or problems with this data?   (at least 200 words)
-  - Some possible problems with this data are the inconsistencies in certain columns, specifically Creator and Title. Author names may either be formatted as "last name, first name", or "first name last name." Book titles also vary depending on a multitude of factors, including if they're abridged, from different publishers, etc. These inconsistencies can make analyzing the dataset more difficult, leaving more opportunity for variation and inaccuracies in the data analysis.
+  - Some possible problems with this data are the inconsistencies in certain columns, specifically Creator and Title. Author names may either be formatted as "last name, first name", or "first name last name." Book titles also vary depending on a multitude of factors, including if they're lowercased, abridged, or from different publishers, etc. Some works don't have an author's name included in the Creator's section, or some works may have multiple ISBN numbers. These inconsistencies can make analyzing the dataset more difficult, leaving more opportunities for variation and inaccuracies in the data analysis. Another main problem of this dataset is its timeframe of only one year. Trends would become more apparent and clear if analyzed from a longer timeframe, such as over several years. For example, it would be much more meaningful to draw an analysis of material type checkout trends over the course of several years than just one. Finally, I think this dataset could be even more compelling if it included the timeframe of each checkout item, such as how many days each book was checked out for. This might help provide more insight into the average amount of time people generally spend on a book, or if there’s a correlation between time checked out on a book and the book’s material type. 
 
 ### First Trends Over Time Chart
 
@@ -48,6 +48,7 @@ During the entire 2022 to 2023 time period, the Charles Dickens physical book wi
 Dickens_plot
 
 ```
+This data visualization compares a selection of Charles Dickens' digital book title checkouts over time during the 2022 to 2023 year. I decided to choose and compare these select book titles specifically because they were books that I had either read before or heard much about, so I was wondering how their checkouts would trend over time, and in relation to one another. Each of the books had a relatively consistent amount of total checkouts before increasing around the November and December months. I found it interesting how even though *A Tale of Two Cities* is one of Dickens' most popular books, its total checkouts fluctuate significantly month by month. A pattern particularly fascinating to see was how *A Christmas Carol* had the lowest amount of total checkouts throughout the year until spiking to the most amount of total checkouts around December. This is most likely because it is a book with holiday and seasonal associations. Even though the other book titles spiked a little around the same time, *David Cooperfield* specifically also had a significant spike that continued to grow even after December.
 
 ### Second Trends Over Time Chart
 
@@ -55,21 +56,13 @@ Dickens_plot
 material_plot
 
 ```
-This chart compares the material type of the Seattle Public Library's checkouts for Charles Dickens' books. I included this chart because I was interested to analyze how material types for books change over time, especially as technology has become more integrated in our lives. I was also wondering what material type users generally prefer to read, whether it's print or digital. A pattern I noticed is how each of the material type categories seem to have declined in total checkouts from January 2022 up until around October 2022 before increasing again. In the case of audiobooks and ebooks, which have been the main preference of material types for users, their total checkouts increased greatly around December and January, with ebooks spiking up to almost 300 total checkouts. The spikes in total checkouts for audiobooks, ebooks, and print books around this time could be attributed to the holidays and New Year's resolutions of reading more. 
+This chart compares the material type of the Seattle Public Library's checkouts for Charles Dickens' books. I included this chart because I was interested to analyze how material types for books would change or not change over time, especially as technology has become more integrated in our lives. I was also wondering what material type users generally prefer to read, and whether or not this preference would change. A pattern I noticed is how each of the material type categories seem to have declined in total checkouts from January 2022 up until around October 2022 before increasing again. In the case of audiobooks and ebooks, which have been the main preference of material types for users, their total checkouts increased greatly around December and January, with ebooks spiking up to almost 300 total checkouts. The spikes in total checkouts for audiobooks, ebooks, and print books around this time could be attributed to the holidays and New Year's resolutions of reading more. In general, people generally prefer digital material types over reading a physical copy by a large margin, and not many people prefer sound discs. I thought this was surprising since I knew that audiobooks and ebooks were popular, but I didn't think their total checkouts would be significantly more than print books. 
 
 
 ### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title.
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r bar_chart, echo = FALSE}
 bar_chart
 
 ```
-This bar chart compares Charles Dickens' top 10 books, based on digital checkouts at the Seattle Public Library. I thought it would be interesting to compare these factors to see which of his works are more or less popular, and how much more or less popular they are in relation to one another. Based on my previous knowledge of Charles Dickens, I knew that *A Tale of Two Cities* (845 checkouts) would be his most popular book, but looking at this data visualization, *David Cooperfield* (715 checkouts) isn't too far behind. But, by a large margin, both *A Tale of Two Cities* and *David Cooperfield* are by far his most popular books, while after *Oliver Twist*, the rest of his books only have less than a hundred checkouts in the entire 2022 to 2023 year. 
+This bar chart compares Charles Dickens' top 10 books, based on digital checkouts at the Seattle Public Library. I thought it would be interesting to compare these factors to see which of his works are the most popular, and how much more or less popular they are in relation to one another. Based on my previous knowledge of Charles Dickens, I knew that *A Tale of Two Cities* (845 checkouts) would be his most popular book, but looking at this data visualization, *David Cooperfield* (715 checkouts) is also an extremely popular book. By a large margin, both *A Tale of Two Cities* and *David Cooperfield* are by far his two most popular books. After *Oliver Twist*, the rest of his books only have less than a hundred checkouts in the entire 2022 to 2023 year. 
