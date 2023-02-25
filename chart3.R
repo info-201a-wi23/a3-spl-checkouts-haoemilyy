@@ -14,17 +14,19 @@ spl_df$date <- as.Date(spl_df$date, format = "%Y-%m-%d")
 Dickens_df <- spl_df %>% 
   filter(str_detect(Creator, "Dickens"))
 
-Dickens_df$Title[str_detect(Dickens_df$Title, "Oliver Twist")] <- "Oliver Twist"
-Dickens_df$Title[str_detect(Dickens_df$Title, "Great Expectations")] <- "Great Expectations"
-Dickens_df$Title[str_detect(Dickens_df$Title, "A Tale of Two Cities")] <- "A Tale of Two Cities"
-Dickens_df$Title[str_detect(Dickens_df$Title, "A Christmas Carol")] <- "A Christmas Carol"
-Dickens_df$Title[str_detect(Dickens_df$Title, "David Copperfield")] <- "David Copperfield"
-Dickens_df$Title[str_detect(Dickens_df$Title, "Bleak House")] <- "Bleak House"
-Dickens_df$Title[str_detect(Dickens_df$Title, "Martin Chuzzlewit")] <- "Martin Chuzzlewit"
-Dickens_df$Title[str_detect(Dickens_df$Title, "The Old Curiosity Shop")] <- "The Old Curiosity Shop"
-Dickens_df$Title[str_detect(Dickens_df$Title, "The Pickwick Papers")] <- "The Pickwick Papers"
-Dickens_df$Title[str_detect(Dickens_df$Title, "Our Mutual Friend")] <- "Our Mutual Friend"
-Dickens_df$Title[str_detect(Dickens_df$Title, "The Life and Adventures of Nicholas Nickleby")] <- "The Life and Adventures of Nicholas Nickleby"
+Dickens_df$Title <- tolower(Dickens_df$Title)
+
+Dickens_df$Title[str_detect(Dickens_df$Title, "oliver twist")] <- "Oliver Twist"
+Dickens_df$Title[str_detect(Dickens_df$Title, "great expectations")] <- "Great Expectations"
+Dickens_df$Title[str_detect(Dickens_df$Title, "a tale of two cities")] <- "A Tale of Two Cities"
+Dickens_df$Title[str_detect(Dickens_df$Title, "a christmas carol")] <- "A Christmas Carol"
+Dickens_df$Title[str_detect(Dickens_df$Title, "david copperfield")] <- "David Copperfield"
+Dickens_df$Title[str_detect(Dickens_df$Title, "bleak house")] <- "Bleak House"
+Dickens_df$Title[str_detect(Dickens_df$Title, "martin chuzzlewit")] <- "Martin Chuzzlewit"
+Dickens_df$Title[str_detect(Dickens_df$Title, "the old curiosity shop")] <- "The Old Curiosity Shop"
+Dickens_df$Title[str_detect(Dickens_df$Title, "the pickwick papers")] <- "The Pickwick Papers"
+Dickens_df$Title[str_detect(Dickens_df$Title, "our mutual friend")] <- "Our Mutual Friend"
+Dickens_df$Title[str_detect(Dickens_df$Title, "the life and adventures of nicholas nickleby")] <- "The Life and Adventures of Nicholas Nickleby"
 
 Dickens_checkouts_df <- Dickens_df %>% 
   group_by(Title) %>% 
@@ -36,7 +38,8 @@ bar_chart <- ggplot(Dickens_checkouts_df[tail(order(Dickens_checkouts_df$Dickens
     x = Dickens_total_checkouts,
     y = reorder(Title, +Dickens_total_checkouts),
     fill = Title)) +
-  labs(title = "Top 10 Charles Dickens Digital Book Checkouts 2022-23",
+  labs(title = "Top 10 Charles Dickens Digital Book Checkouts",
+       subtitle = "From 2022 - 2023 at the Seattle Public Library",
        x = "Total Checkouts",
        y = "Book Title") +
   guides(fill="none")

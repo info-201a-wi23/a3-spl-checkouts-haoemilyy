@@ -21,14 +21,19 @@ Dickens_df$Title[str_detect(Dickens_df$Title, "David Copperfield")] <- "David Co
 
 Dickens_titles <- Dickens_df %>% 
   filter(Title %in% 
-           c("Oliver Twist", "Great Expectations", "A Tale of Two Cities", "A Christmas Carol", "David"))
+           c("Oliver Twist", "Great Expectations", "A Tale of Two Cities", "A Christmas Carol", "David Copperfield"))
 
-Dickens_plot <- ggplot(data = Dickens_df) +
+Dickens_checkouts_df <- Dickens_titles %>% 
+  group_by(date, Title) %>% 
+  summarize(Dickens_total_checkouts = sum(Checkouts))
+
+Dickens_plot <- ggplot(data = Dickens_checkouts_df) +
   geom_line(aes(x = date,
                 y = Dickens_total_checkouts,
                 color = Title)) +
   scale_color_brewer(palette = "Set2") +
   labs(title = "Comparing Charles Dickens' Book Title Digital Checkouts",
+       subtitle = "From 2022 - 2023 at the Seattle Public Library",
        x = "Date",
        y = "Total Checkouts") +
   guides(color = guide_legend(title = "Book Title"))  

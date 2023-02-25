@@ -23,6 +23,8 @@ material_plot <- ggplot(data = Dickens_type_checkouts_df) +
                 color = MaterialType)) +
   scale_color_brewer(palette = "Set2") +
     labs(title = "Comparing the Material Type of Checkout for Charles Dicken's Books",
+         subtitle = "From 2022 - 2023 at the Seattle Public Library",
        x = "Date",
        y = "Total Checkouts") +
   guides(color = guide_legend(title = "Material Type"))
+
