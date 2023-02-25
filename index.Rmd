@@ -8,9 +8,9 @@ output: html_document
 library("dplyr")
 library("stringr")
 library("tidyverse")
-source("chart1_example.R")
+source("chart1.R")
 source("summary.R")
-source("chart2_example.R")
+source("chart2.R")
 source("chart3.R")
 ```
 
@@ -33,6 +33,10 @@ During the entire 2022 to 2023 time period, the Charles Dickens physical book wi
   - The Seattle Public Library provided this data as an open source dataset.
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
   - This data is collected between January 2022 and January 2023, categorizing books as either physical and digital and by their material type, including ebooks, audiobooks, print, or sound discs. In my specialized Charles Dickens dataset, some of the book labels include "Young Adult," "Classic Literature," "Fiction," and "Literature." The number of checkouts in this dataset is recorded monthly for each book title found at the Seattle Public Library.  
+- How many observations (rows) are in your data?
+  - There are 2,757,014 rows in the original SPL dataset, but there are 1,190 rows in the filtered Dickens dataset.
+- How many features (columns) are in the data?
+  - There are 12 columns in the data.
 - How was the data collected or generated?  
   - This data was collected on a monthly basis, counting the Seattle Public Library checkouts by each book title for all physical and electronic items.
 - Why was the data collected?  

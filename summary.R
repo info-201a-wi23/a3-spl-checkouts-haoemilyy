@@ -4,17 +4,22 @@ library("stringr")
 library("ggplot2")
 library("plotly")
 
+# read in data
 spl_df <- read.csv("~/2022-2023-All-Checkouts-SPL-Data.csv/2022-2023-All-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
 
+# Convert date using as.Date
 spl_df <- spl_df %>% 
   mutate(date = paste0(CheckoutYear, "-", CheckoutMonth, "-01"))
 spl_df$date <- as.Date(spl_df$date, format = "%Y-%m-%d")
 
+# create dataframe for just Dickens' books
 Dickens_df <- spl_df %>% 
   filter(str_detect(Creator, "Dickens"))
 
+# convert all titles to lowercase
 Dickens_df$Title <- tolower(Dickens_df$Title)
 
+# # search for titles with key words then replace with proper title name
 Dickens_df$Title[str_detect(Dickens_df$Title, "oliver twist")] <- "Oliver Twist"
 Dickens_df$Title[str_detect(Dickens_df$Title, "great expectations")] <- "Great Expectations"
 Dickens_df$Title[str_detect(Dickens_df$Title, "a tale of two cities")] <- "A Tale of Two Cities"
